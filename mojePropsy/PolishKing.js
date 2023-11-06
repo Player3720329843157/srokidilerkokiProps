@@ -1,10 +1,10 @@
 import {Text, View} from 'react-native';
 
-const PolishKing = ()=>{
+const PolishKing = ({name})=>{
 
     return(
         <View>
-            <Text>PolishKing is coming</Text>
+            <Text>Polish King {name} is coming</Text>
         </View>
     )
 }
