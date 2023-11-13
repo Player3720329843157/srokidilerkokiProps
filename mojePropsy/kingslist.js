@@ -1,4 +1,4 @@
-import {Text, View} from 'react-native';
+import {Text, View, FlatList} from 'react-native';
 
 
 
@@ -7,7 +7,16 @@ const KingsList = ({KingsList}) => {
 
     return(
         <View>
-            <Text>Lista królów</Text>
+            <Text>LISTA KRÓLÓW z FlatList {name}</Text>
+            <FlatList
+                data={KingsList}
+                renderItem={({item: king})=>(
+                    <View>
+                        <Text>{king.id}, imię: {king.name}
+                        panowanie: {king.reignDate}</Text>
+                    </View>
+                    )}
+                />
         </View>
     )
 }
